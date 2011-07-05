@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: Rakefile [RDoc Documentation]</title>
+
+  <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+  <script src="./js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file">
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./public/images/IUI_LICENSE_txt.html">IUI_LICENSE.txt</a></li>
+        
+          <li class="file"><a href="./public/jqtouch/changes_txt.html">changes.txt</a></li>
+        
+          <li class="file"><a href="./rhoconfig_txt.html">rhoconfig.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./AppApplication.html">AppApplication</a></li>
+        
+          <li><a href="./ApplicationHelper.html">ApplicationHelper</a></li>
+        
+          <li><a href="./BrowserHelper.html">BrowserHelper</a></li>
+        
+          <li><a href="./SettingsController.html">SettingsController</a></li>
+        
+          <li><a href="./SpecRunner.html">SpecRunner</a></li>
+        
+          <li><a href="./SpecRunnerController.html">SpecRunnerController</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    
+<p>require ‘yaml’</p>
+
+<p>unless File.exists? “build.yml”</p>
+
+<pre>puts &quot;Cannot find build.yml&quot;
+exit 1</pre>
+
+<p>end</p>
+
+<p>$app_config = YAML::load_file(“build.yml”) $app_path =
+File.expand_path(File.dirname(__FILE__))</p>
+
+<p>if ENV[“RHO_HOME”].nil?</p>
+
+<pre>rakefilepath = &quot;#{$app_config[&quot;sdk&quot;]}/Rakefile&quot;</pre>
+
+<p>else</p>
+
+<pre>rakefilepath = &quot;#{ENV[&quot;RHO_HOME&quot;]}/Rakefile&quot;</pre>
+
+<p>end</p>
+
+<p>unless File.exists? rakefilepath</p>
+
+<pre>puts &quot;\nCannot find your Rhodes gem or source path: #{rakefilepath}&quot;
+puts &quot;\nIf you have the sdk on your path or have installed the gem this&quot;
+puts &quot;can be resolved by running 'set-rhodes-sdk'&quot;
+puts &quot;\nYou can also set this manually by modifying your build.yml or&quot;
+puts &quot;setting the environment variable RHO_HOME&quot;
+exit 1</pre>
+
+<p>end</p>
+
+<p>load rakefilepath</p>
+
+  </div>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>
+

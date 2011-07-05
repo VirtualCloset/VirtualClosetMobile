@@ -1,0 +1,22 @@
+# sdk: "/Users/nickcherry/.rvm/gems/ruby-1.9.2-p136/gems/rhodes-3.0.2"
+sdk: "/Users/nickcherry/.rvm/gems/ruby-1.9.2-p0/gems/rhodes-3.0.2"
+sdkversion: 3.0.1
+name: VirtualClosetMobile
+version: 1.0
+vendor: rhomobile
+build: debug
+bbver: 4.6
+wmsdk: "Windows Mobile 6 Professional SDK (ARMV4I)"
+applog: rholog.txt
+iphone:
+  configuration: Debug
+  sdk: iphonesimulator4.3
+  provisionprofile:
+  codesignidentity:
+  entitlements:
+  BundleIdentifier: com.rhomobile.virtualclosetmobile
+  BundleURLScheme: virtualclosetmobile
+wp:
+  productid: 'ba101300-8954-012e-6a16-109add55762b'
+
+extensions: ["json", "mspec", "fileutils"]
